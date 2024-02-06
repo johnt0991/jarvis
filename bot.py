@@ -32,7 +32,17 @@ bot_client = slack.WebClient(token=os.environ['slack_token'])
 user_client = slack.WebClient(token=os.environ['user_token'])
 bot_id = bot_client.api_call('auth.test')['user_id']
 
-pattern_nono = r'\b(?:{})\b'.format('|'.join(map(re.escape, no_no_words)))
+def generate_pattern(words):
+    patterns = []
+    for word in words:
+        patterns.append(re.escape(word))
+        if word.endswith('s'):
+            patterns.append(re.escape(word[:-1]))
+        else:
+            patterns.append(re.escape(word) + 's?')
+    return r'\b(?:' + '|'.join(patterns) + r')\b'
+
+pattern_nono = generate_pattern(no_no_words)
 pattern_hr = r'\b(?:{}|401k)\b'.format('|'.join(map(re.escape, hr_keywords)))
 
 #when message received, run loop
