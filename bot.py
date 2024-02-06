@@ -55,7 +55,7 @@ def message(payload):
                 matched_keyword = re.search(pattern_nono, text.lower()).group(0)
                 user_client.chat_delete(channel=channel_id,ts=timestamp)
                 bot_client.chat_postMessage(channel='C04Q754PE6B',text=('<!here> \n\nUsername: {} \nUser ID: {} \nChannel Name: {} \nMessage: {} \nTime Stamp: {}'.format(real_name, user_id,channel_id, text,timestamp)))
-                bot_client.chat_postMessage(channel=user_id,text='Dear {}, \n\nYou have violated the FBIN Connected Slack Guidelines.  Your message containing the violation has been removed from the public channel and forwarded for review.  If you have any further questions, please contact your local HRBP'.format(real_name))
+                bot_client.chat_postMessage(channel=user_id,text='Dear {}, \n\nYou have violated the FBIN Connected Slack Guidelines.  Your message containing the violation has been removed from the channel and forwarded for review.  If you have any further questions, please contact your local HRBP'.format(real_name))
                 return None
             #checks for any hr related key words
             if re.search(pattern_hr, text.lower()):
