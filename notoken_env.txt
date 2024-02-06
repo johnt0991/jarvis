@@ -4,6 +4,6 @@ user_token={}
 
 hr_keywords=hr,benefits
 
-hr_assignment={"Riyaaz Tabani":{"name": "Riyaaz Tabani","hr_rep": "HR Rep Name","email": "email@email.com"}}
+hr_assignment={"Employee":{"name": "Employee","hr_rep": "HR Rep Name","email": "email@email.com"}}
 
 no_no_words=beaner,Chink,coon,cotton picker,diaperhead,dothead,hick,hillbilly,honky,kike,mick,Nazi,nigga,nigger,niglet,niglette,paki,peckerwood,porch monkey,raghead,redneck,sand nigger,sheeny,slanteye,spic,spook,towel head,wetback,wigger,wop,fag,faggot,dyke,cunt,whore,slut,queer,lesbian,rape,fatass,fat ass,autistic,twink,lesbo,gay,homo,retarded,retard,murder,porn
